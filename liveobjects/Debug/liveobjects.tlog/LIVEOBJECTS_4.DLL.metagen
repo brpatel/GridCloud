@@ -1,0 +1,2099 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly liveobjects_4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8bbbd2e3ddcb36ea: 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly liveobjects_1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0f84102260c4a1aa: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Class QS.Fx.Object.Runtime4: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    Int32 QsmTTL : Public, Static
+Interface QS._core_c_.Base2.IBase2Serializable: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    UInt32 Size 'get ' : 
+    QS.ClassID ClassID 'get ' : 
+  Methods:
+    get_Size(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    load(IBlockOfData): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    save(IBlockOfData): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_ClassID(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface QS._core_c_.Base2.IBlockOfData: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    QS._core_c_.Base2.IBase2Serializable
+    QS.Fx.Serialization.ISerializable
+  Properties:
+    Byte[] Buffer 'get ' : 
+    UInt32 OffsetWithinBuffer 'get ' : 
+    UInt32 SizeOfData 'get ' : 
+    QS._core_c_.Base2.IBlockOfData ShallowCopy 'get ' : 
+    QS._core_c_.Base2.IBlockOfData StandaloneCopy 'get ' : 
+  Methods:
+    get_Buffer(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_OffsetWithinBuffer(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SizeOfData(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    consume(UInt32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    chopOff(UInt32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_ShallowCopy(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_StandaloneCopy(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface QS._core_c_.Base2.IOutgoingData: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    QS._core_c_.Base2.IBase2Serializable
+  Methods:
+    splitAt(UInt32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface QS._core_c_.Base.IBase1Serializable: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    QS.ClassID ClassIDAsSerializable 'get ' : 
+  Methods:
+    get_ClassIDAsSerializable(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    save(Stream): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    load(Stream): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class QS._core_c_.Base2.BlockOfData: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(UInt32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.IO.MemoryStream): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Byte[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Byte[], UInt32, UInt32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_c_.Base2.IBlockOfData
+    QS._core_c_.Base2.IBase2Serializable
+    QS.Fx.Serialization.ISerializable
+    QS._core_c_.Base2.IOutgoingData
+    QS._core_c_.Base.IBase1Serializable
+  Properties:
+    System.IO.MemoryStream AsStream 'get ' : 
+    QS._core_c_.Base2.IBlockOfData ShallowCopy 'get ' : 
+    QS._core_c_.Base2.IBlockOfData StandaloneCopy 'get ' : 
+    Byte[] Buffer 'get ' : 
+    UInt32 OffsetWithinBuffer 'get ' : 
+    UInt32 SizeOfData 'get ' : 
+    QS.ClassID ClassID 'get ' : 
+    UInt32 Size 'get ' : 
+    QS.Fx.Serialization.SerializableInfo SerializableInfo 'get ' : 
+  Methods:
+    get_AsStream(): PrivateScope, Public, HideBySig, SpecialName
+    get_ShallowCopy(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_StandaloneCopy(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    resetCursor(): PrivateScope, Public, HideBySig
+    consume(UInt32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    chopOff(UInt32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Buffer(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_OffsetWithinBuffer(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_SizeOfData(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ClassID(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Size(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    save(IBlockOfData): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    load(IBlockOfData): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_SerializableInfo(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    SerializeTo(ConsumableBlock&, IList`1&): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    DeserializeFrom(ConsumableBlock&, ConsumableBlock&): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    splitAt(UInt32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class QS._core_c_.Base2.PreciseClock: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :QS.Fx.Inspection.Inspectable
+  Interfaces:
+    QS.Fx.Clock.IClock
+  Properties:
+    QS.Fx.Clock.IClock Clock 'get ' : 
+    Double Time 'get ' : 
+  Methods:
+    get_Clock(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Time(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Interface QS._core_c_.Base2.ISerializer: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    CreateObject(UInt16): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    registerClass(UInt16, Type): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CreateObject(ClassID): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    registerClass(ClassID, Type): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    registerClasses(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    registerClasses(ILogger): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    registerClasses(ILogger, Assembly): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class QS._core_c_.Base2.Serializer: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(UInt32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_c_.Base2.ISerializer
+  Properties:
+    QS._core_c_.Base2.ISerializer CommonSerializer 'get ' : 
+  Methods:
+    registerClasses(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    registerClasses(ILogger): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    registerClasses(ILogger, Assembly): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    registerClasses(ILogger, Assembly, Type, RegisterClassCallback): PrivateScope, Public, Static, HideBySig
+    get_CommonSerializer(): PrivateScope, Public, Static, HideBySig, SpecialName
+    registerClass(UInt16, Type): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    registerClass(ClassID, Type): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    registerClassWith(UInt16, Type, IDictionary): PrivateScope, Public, Static, HideBySig
+    CreateObject(UInt16): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    CreateObject(ClassID): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    CreateObjectWith(UInt16, IDictionary): PrivateScope, Public, Static, HideBySig
+    saveInt32(Int32, IBlockOfData): PrivateScope, Public, Static, HideBySig
+    loadInt32(IBlockOfData): PrivateScope, Public, Static, HideBySig
+    saveUInt32(UInt32, IBlockOfData): PrivateScope, Public, Static, HideBySig
+    loadUInt32(IBlockOfData): PrivateScope, Public, Static, HideBySig
+    saveUInt16(UInt16, IBlockOfData): PrivateScope, Public, Static, HideBySig
+    loadUInt16(IBlockOfData): PrivateScope, Public, Static, HideBySig
+    saveBool(Boolean, IBlockOfData): PrivateScope, Public, Static, HideBySig
+    loadBool(IBlockOfData): PrivateScope, Public, Static, HideBySig
+    saveByte(Byte, IBlockOfData): PrivateScope, Public, Static, HideBySig
+    loadByte(IBlockOfData): PrivateScope, Public, Static, HideBySig
+    saveIPAddress(IPAddress, IBlockOfData): PrivateScope, Public, Static, HideBySig
+    loadIPAddress(IBlockOfData): PrivateScope, Public, Static, HideBySig
+Class QS._core_c_.Base2.Serializer+RegisterClassCallback: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(UInt16, Type): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(UInt16, Type, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class QS._core_c_.Base2.SizeOf: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    UInt32 Int32 'get ' : 
+    UInt32 UInt32 'get ' : 
+    UInt32 UInt16 'get ' : 
+    UInt32 Bool 'get ' : 
+    UInt32 Byte 'get ' : 
+    UInt32 IPAddress 'get ' : 
+  Methods:
+    get_Int32(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_UInt32(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_UInt16(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Bool(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Byte(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_IPAddress(): PrivateScope, Public, Static, HideBySig, SpecialName
+Class QS._core_c_.Base2.StringWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :QS._core_c_.Base2.BlockOfData
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String String 'get ' : 
+    QS.ClassID ClassID 'get ' : 
+    QS.Fx.Serialization.SerializableInfo SerializableInfo 'get ' : 
+  Methods:
+    register_serializable(): PrivateScope, Public, Static, HideBySig
+    get_String(): PrivateScope, Public, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_ClassID(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_SerializableInfo(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Struct QS._core_c_.Base3.Incarnation: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, Serializable, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(System.DateTime): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(UInt32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IComparable`1[QS._core_c_.Base3.Incarnation]
+    QS.Fx.Serialization.ISerializable
+  Properties:
+    QS._core_c_.Base3.Incarnation Current 'get ' : 
+    UInt32 SeqNo 'get set' : 
+    QS.Fx.Serialization.SerializableInfo SerializableInfo 'get ' : 
+  Methods:
+    get_Current(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_SeqNo(): PrivateScope, Public, HideBySig, SpecialName
+    set_SeqNo(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    op_Explicit(Incarnation): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Explicit(UInt32): PrivateScope, Public, Static, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    CompareTo(Incarnation): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_SerializableInfo(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    SerializeTo(ConsumableBlock&, IList`1&): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    DeserializeFrom(ConsumableBlock&, ConsumableBlock&): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+Class QS._core_c_.Base3.InstanceID: AutoLayout, AnsiClass, Class, Public, Sealed, Serializable, BeforeFieldInit
+    Void .ctor(QS.Fx.Network.NetworkAddress, System.DateTime): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(QS.Fx.Network.NetworkAddress, QS._core_c_.Base3.Incarnation): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(QS.Fx.Network.NetworkAddress, UInt32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS.Fx.Serialization.ISerializable
+    System.IComparable
+    System.IComparable`1[QS._core_c_.Base3.InstanceID]
+    QS.Fx.Serialization.IStringSerializable
+    System.IEquatable`1[QS._core_c_.Base3.InstanceID]
+  Properties:
+    QS.Fx.Network.NetworkAddress Address 'get set' : 
+    QS._core_c_.Base3.Incarnation Incarnation 'get set' : 
+    QS.Fx.Serialization.SerializableInfo SerializableInfo 'get ' : 
+  Methods:
+    op_Implicit(String): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Implicit(InstanceID): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Address(): PrivateScope, Public, HideBySig, SpecialName
+    set_Address(NetworkAddress): PrivateScope, Public, HideBySig, SpecialName
+    get_Incarnation(): PrivateScope, Public, HideBySig, SpecialName
+    set_Incarnation(Incarnation): PrivateScope, Public, HideBySig, SpecialName
+    get_SerializableInfo(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    SerializeTo(ConsumableBlock&, IList`1&): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    DeserializeFrom(ConsumableBlock&, ConsumableBlock&): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+Struct QS._core_c_.Base3.Message: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(UInt32, QS.Fx.Serialization.ISerializable): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS.Fx.Serialization.ISerializable
+  Fields:
+    UInt32 destinationLOID : Public
+    QS.Fx.Serialization.ISerializable transmittedObject : Public
+    Int32 HeaderOverhead = 6 : Public, Static, Literal, HasDefault
+  Properties:
+    Wrapper Wrap 'get ' : 
+    QS.Fx.Serialization.SerializableInfo SerializableInfo 'get ' : 
+  Methods:
+    get_Wrap(): PrivateScope, Public, HideBySig, SpecialName
+    get_SerializableInfo(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    SerializeTo(ConsumableBlock&, IList`1&): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    DeserializeFrom(ConsumableBlock&, ConsumableBlock&): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class QS._core_c_.Base3.SerializableWrapper`1[C]: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  Type parameter: C, QS.Fx.Serialization.ISerializable
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(C): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS.Fx.Serialization.ISerializable
+  Properties:
+    C WrappedObject 'get ' : 
+  Methods:
+    get_WrappedObject(): PrivateScope, Public, HideBySig, SpecialName
+Class QS._core_c_.Base3.Message+Wrapper: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+  :QS._core_c_.Base3.SerializableWrapper`1[QS._core_c_.Base3.Message]
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(QS._core_c_.Base3.Message): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Interface QS._core_x_.Serialization.ISerializer`1[SerializationInterface]: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Type parameter: SerializationInterface
+  Methods:
+    Serialize(SerializationInterface): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Serialize(C): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Deserialize(ArraySegment`1, Int32&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Deserialize(ArraySegment`1, Int32&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class QS._core_c_.Base3.Serializer: AutoLayout, AnsiClass, Class, Public
+  Interfaces:
+    QS._core_x_.Serialization.ISerializer`1[QS.Fx.Serialization.ISerializable]
+    QS.Fx.Serialization.ISerializer
+  Fields:
+    QS._core_c_.Base3.Serializer Global : Public, Static, InitOnly
+  Properties:
+    System.String Log 'get ' : 
+  Methods:
+    registerClass(UInt16, Type): PrivateScope, Public, Static, HideBySig
+    CreateObject(UInt16): PrivateScope, Public, Static, HideBySig
+    get_Log(): PrivateScope, Public, Static, HideBySig, SpecialName
+    FlattenObject(ISerializable): PrivateScope, Public, Static, HideBySig
+    ToSegments(ISerializable): PrivateScope, Public, Static, HideBySig
+    FromSegment(ArraySegment`1): PrivateScope, Public, Static, HideBySig
+    ToString(IStringSerializable): PrivateScope, Public, Static, HideBySig
+    FromString(String): PrivateScope, Public, Static, HideBySig
+Class QS._core_c_.Base6.CompletionCallback`1[ContextClass]: AutoLayout, AnsiClass, Class, Public, Sealed
+  Type parameter: ContextClass
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Boolean, Exception, ContextClass): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(Boolean, Exception, ContextClass, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class QS._core_c_.Base6.CompletionCallback`2[ContextClass,ReturnedClass]: AutoLayout, AnsiClass, Class, Public, Sealed
+  Type parameter: ContextClass
+  Type parameter: ReturnedClass
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Boolean, Exception, ContextClass, ReturnedClass): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(Boolean, Exception, ContextClass, ReturnedClass, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class QS._core_c_.Base6.GetObjectsCallback`1[C]: AutoLayout, AnsiClass, Class, Public, Sealed
+  Type parameter: C
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Queue`1, Int32, Int32&(Out), Boolean&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(Queue`1, Int32, Int32&(Out), Boolean&(Out), AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(Int32&(Out), Boolean&(Out), IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface QS._core_c_.Base6.IAsynchronous`3[ArgumentClass,ContextClass,ReturnedClass]: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Type parameter: ArgumentClass
+  Type parameter: ContextClass
+  Type parameter: ReturnedClass
+  Properties:
+    ArgumentClass Argument 'get ' : 
+    ContextClass Context 'get ' : 
+    QS._core_c_.Base6.CompletionCallback`2[ContextClass,ReturnedClass] CompletionCallback 'get ' : 
+  Methods:
+    get_Argument(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Context(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CompletionCallback(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface QS._core_c_.Base6.IAsynchronous`2[ArgumentClass,ContextClass]: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Type parameter: ArgumentClass
+  Type parameter: ContextClass
+  Properties:
+    ArgumentClass Argument 'get ' : 
+    ContextClass Context 'get ' : 
+    QS._core_c_.Base6.CompletionCallback`1[ContextClass] CompletionCallback 'get ' : 
+  Methods:
+    get_Argument(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Context(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CompletionCallback(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface QS._core_c_.Base6.IAsynchronous`1[ArgumentClass]: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Type parameter: ArgumentClass
+  Interfaces:
+    QS._core_c_.Base6.IAsynchronous`2[ArgumentClass,System.Object]
+Interface QS._core_c_.Base6.ISink`1[C]: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Type parameter: C
+  Properties:
+    Int32 MTU  'get ' : 
+  Methods:
+    get_MTU(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Send(GetObjectsCallback`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class QS._core_c_.Base.WriteCallback: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(String, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class QS._core_c_.Base.WriteLineCallback: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(String, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class QS._core_c_.Base.ConsoleWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(QS._core_c_.Base.WriteLineCallback): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS.Fx.Logging.IConsole
+  Methods:
+    Log(String): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Interface QS._core_c_.Base.IMessage: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    QS._core_c_.Base.IBase1Serializable
+Interface QS._core_c_.Base.IOutputReader: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    System.String CurrentContents 'get ' : 
+    UInt32 NumberOfMessages 'get ' : 
+    System.String Item [UInt32] 'get ' : 
+    QS.Fx.Logging.IConsole Console 'get set' : 
+  Methods:
+    get_CurrentContents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_NumberOfMessages(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Item(UInt32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    rangeAsArray(UInt32, UInt32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    rangeAsString(UInt32, UInt32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Console(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Console(IConsole): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface QS._core_c_.Base.IReadableLogger: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    QS.Fx.Logging.ILogger
+    QS.Fx.Logging.IConsole
+    QS._core_c_.Base.IOutputReader
+Interface QS._core_c_.Base.ISerializer: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    register(ClassID, CreateSerializable): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    createObject(ClassID): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class QS._core_c_.Base.CreateSerializable: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class QS._core_c_.Base.Serializable`1[C]: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Type parameter: C, QS._core_c_.Base.IBase1Serializable,  DefaultConstructor
+  Fields:
+    QS._core_c_.Base.CreateSerializable CreateSerializable : Public, Static, InitOnly
+Class QS._core_c_.Base.Logger: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :QS.Fx.Inspection.Inspectable
+    Void .ctor(QS.Fx.Clock.IClock): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(QS.Fx.Clock.IClock, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(QS.Fx.Clock.IClock, Boolean, QS.Fx.Logging.IConsole): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(QS.Fx.Clock.IClock, Boolean, QS.Fx.Logging.IConsole, Boolean, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(QS.Fx.Clock.IClock, Boolean, QS.Fx.Logging.IConsole, TimestampingMode, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_c_.Base.IReadableLogger
+    QS.Fx.Logging.ILogger
+    QS.Fx.Logging.IConsole
+    QS._core_c_.Base.IOutputReader
+    QS.Fx.Diagnostics.IDiagnosticsComponent
+  Properties:
+    QS.Fx.Clock.IClock DefaultClock 'get set' : 
+    QS._core_c_.Base.Logger StandardConsole 'get ' : 
+    Boolean Buffering 'get set' : 
+    TimestampingMode TimestampingModeOf 'get set' : 
+    System.String PrefixString 'get set' : 
+    System.String[] Messages 'get set' : 
+    QS.Fx.Logging.IConsole Console 'get set' : 
+    UInt32 NumberOfMessages 'get ' : 
+    System.String Item [UInt32] 'get ' : 
+    System.String CurrentContents 'get ' : 
+  Methods:
+    get_DefaultClock(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_DefaultClock(IClock): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_StandardConsole(): PrivateScope, Public, Static, HideBySig, SpecialName
+    Log(String): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Buffering(): PrivateScope, Public, HideBySig, SpecialName
+    set_Buffering(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_TimestampingModeOf(): PrivateScope, Public, HideBySig, SpecialName
+    set_TimestampingModeOf(TimestampingMode): PrivateScope, Public, HideBySig, SpecialName
+    get_PrefixString(): PrivateScope, Public, HideBySig, SpecialName
+    set_PrefixString(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Messages(): PrivateScope, Public, HideBySig, SpecialName
+    set_Messages(String[]): PrivateScope, Public, HideBySig, SpecialName
+    Clear(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Log(Object, String): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Console(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Console(IConsole): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_NumberOfMessages(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Item(UInt32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    rangeAsString(UInt32, UInt32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    rangeAsArray(UInt32, UInt32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_CurrentContents(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Struct QS._core_c_.Base.Logger+TimestampingMode: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    TimestampingMode NONE = 0 : Public, Static, Literal, HasDefault
+    TimestampingMode REALTIME = 1 : Public, Static, Literal, HasDefault
+    TimestampingMode CPUTIME = 2 : Public, Static, Literal, HasDefault
+Class QS._core_c_.Base.XmlObject: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.IO.Stream): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Object): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_c_.Base.IMessage
+    QS._core_c_.Base.IBase1Serializable
+  Fields:
+    QS._core_c_.Base.CreateSerializable Factory : Public, Static
+  Properties:
+    System.Object Contents 'get set' : 
+    QS.ClassID ClassIDAsSerializable 'get ' : 
+  Methods:
+    get_Contents(): PrivateScope, Public, HideBySig, SpecialName
+    set_Contents(Object): PrivateScope, Public, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_ClassIDAsSerializable(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    save(Stream): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    load(Stream): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class QS._core_c_.Base.XmlObject+ObjectWrapper: AutoLayout, AnsiClass, Class, NestedPublic, Serializable, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String type : Public
+    System.String data : Public
+Class QS._core_c_.Collections.Dictionary`2[K,T]: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Type parameter: K
+  Type parameter: T
+  Properties:
+    System.Collections.Generic.IDictionary`2[K,T] Create 'get ' : 
+  Methods:
+    get_Create(): PrivateScope, Public, Static, HideBySig, SpecialName
+Interface QS._core_c_.Collections.IDictionary: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    QS.Fx.Inspection.IAttributeCollection
+    QS.Fx.Inspection.IAttribute
+  Properties:
+    System.Object[] Keys 'get ' : 
+    System.Object[] Values 'get ' : 
+    System.Object Item [System.Object] 'get set' : 
+  Methods:
+    get_Keys(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Values(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    lookup(Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    lookupOrCreate(Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Item(Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Item(Object, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    remove(Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class QS._core_c_.Collections.Hashtable: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(UInt32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_c_.Collections.IDictionary
+    QS.Fx.Inspection.IAttributeCollection
+    QS.Fx.Inspection.IAttribute
+    QS._core_c_.Base.IBase1Serializable
+    System.Runtime.Serialization.ISerializable
+    System.Collections.ICollection
+    System.Collections.IEnumerable
+  Properties:
+    QS.ClassID ClassIDAsSerializable 'get ' : 
+    QS._core_c_.Collections.XmlAssociation[] XmlAssociations 'get set' : 
+    System.String AsCompactString 'get ' : 
+    System.Object[] Keys 'get ' : 
+    System.Object[] Values 'get ' : 
+    System.Object Item [System.Object] 'get set' : 
+    QS._core_c_.Collections.Hashtable CreateCopy 'get ' : 
+  Methods:
+    get_ClassIDAsSerializable(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    save(Stream): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    load(Stream): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_XmlAssociations(): PrivateScope, Public, HideBySig, SpecialName
+    set_XmlAssociations(XmlAssociation[]): PrivateScope, Public, HideBySig, SpecialName
+    GetObjectData(SerializationInfo, StreamingContext): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_AsCompactString(): PrivateScope, Public, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_Keys(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Values(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    lookup(Object): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    lookupOrCreate(Object): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Item(Object): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Item(Object, Object): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    remove(Object): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_CreateCopy(): PrivateScope, Public, HideBySig, SpecialName
+Interface QS._core_c_.Collections.IDictionaryEntry: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    QS.Fx.Inspection.IScalarAttribute
+    QS.Fx.Inspection.IAttribute
+  Properties:
+    System.Object Key 'get ' : 
+    System.Object Value 'get set' : 
+  Methods:
+    get_Key(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Value(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Value(Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class QS._core_c_.Collections.NoSuchKeyException: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Exception
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class QS._core_c_.Collections.XmlAssociation: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(QS._core_c_.Base.XmlObject, QS._core_c_.Base.XmlObject): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    QS._core_c_.Base.XmlObject Key 'get set' : 
+    QS._core_c_.Base.XmlObject Value 'get set' : 
+  Methods:
+    get_Key(): PrivateScope, Public, HideBySig, SpecialName
+    set_Key(XmlObject): PrivateScope, Public, HideBySig, SpecialName
+    get_Value(): PrivateScope, Public, HideBySig, SpecialName
+    set_Value(XmlObject): PrivateScope, Public, HideBySig, SpecialName
+Struct QS._core_c_.Components.Attribute: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, Serializable, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(System.String, System.Object): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS.Fx.Inspection.IScalarAttribute
+    QS.Fx.Inspection.IAttribute
+    QS.Fx.Serialization.ISerializable
+  Properties:
+    QS.Fx.Serialization.SerializableInfo SerializableInfo 'get ' : 
+    System.String Name 'get set' : 
+    System.Object Value 'get set' : 
+  Methods:
+    get_SerializableInfo(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    SerializeTo(ConsumableBlock&, IList`1&): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    DeserializeFrom(ConsumableBlock&, ConsumableBlock&): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    set_Name(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Value(): PrivateScope, Public, HideBySig, SpecialName
+    set_Value(Object): PrivateScope, Public, HideBySig, SpecialName
+Interface QS._core_c_.Components.IAttributeSet: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    System.Object Item [System.String] 'get set' : 
+    System.Collections.Generic.IEnumerator`1[QS._core_c_.Components.Attribute] Attributes 'get ' : 
+  Methods:
+    contains(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Item(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Item(String, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Attributes(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class QS._core_c_.Components.AttributeSet: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(QS._core_c_.Components.Attribute[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Collections.Generic.IEnumerable`1[QS._core_c_.Components.Attribute]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Object): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(QS._core_c_.Components.AttributeSet): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(QS._core_c_.Components.IAttributeSet): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Collections.Generic.IEnumerator`1[QS._core_c_.Components.Attribute]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_c_.Components.IAttributeSet
+    QS.Fx.Inspection.IAttributeCollection
+    QS.Fx.Inspection.IAttribute
+    QS.Fx.Serialization.ISerializable
+  Properties:
+    System.String AsString 'get ' : 
+    QS._core_c_.Components.AttributeSet None 'get ' : 
+    System.Object Item [System.String] 'get set' : 
+    QS._core_c_.Collections.XmlAssociation[] AttributesAsXmlAssociations 'get set' : 
+    QS._core_c_.Collections.Hashtable Attributes 'get set' : 
+  Methods:
+    get_AsString(): PrivateScope, Public, HideBySig, SpecialName
+    op_Explicit(String): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Explicit(AttributeSet): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_None(): PrivateScope, Public, Static, HideBySig, SpecialName
+    contains(String): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    remove(String): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Item(String): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Item(String, Object): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_AttributesAsXmlAssociations(): PrivateScope, Public, HideBySig, SpecialName
+    set_AttributesAsXmlAssociations(XmlAssociation[]): PrivateScope, Public, HideBySig, SpecialName
+    get_Attributes(): PrivateScope, Public, HideBySig, SpecialName
+    set_Attributes(Hashtable): PrivateScope, Public, HideBySig, SpecialName
+    Add(Attribute): PrivateScope, Public, HideBySig
+    AddRange(IEnumerable`1): PrivateScope, Public, HideBySig
+    AddRange(IEnumerator`1): PrivateScope, Public, HideBySig
+Class QS._core_c_.Core.Address: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.Net.IPAddress, System.Net.IPAddress, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IComparable`1[QS._core_c_.Core.Address]
+    System.IEquatable`1[QS._core_c_.Core.Address]
+  Properties:
+    System.Net.IPAddress NIC 'get set' : 
+    System.Net.IPAddress IPAddress 'get set' : 
+    Int32 PortNumber 'get set' : 
+    Boolean IsMulticast 'get ' : 
+  Methods:
+    get_NIC(): PrivateScope, Public, HideBySig, SpecialName
+    set_NIC(IPAddress): PrivateScope, Public, HideBySig, SpecialName
+    get_IPAddress(): PrivateScope, Public, HideBySig, SpecialName
+    set_IPAddress(IPAddress): PrivateScope, Public, HideBySig, SpecialName
+    get_PortNumber(): PrivateScope, Public, HideBySig, SpecialName
+    set_PortNumber(Int32): PrivateScope, Public, HideBySig, SpecialName
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    CompareIPs(IPAddress, IPAddress): PrivateScope, Public, Static, HideBySig
+    get_IsMulticast(): PrivateScope, Public, HideBySig, SpecialName
+Interface QS._core_c_.Core.ISNode`1[K]: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Type parameter: K, System.IComparable`1[K]
+  Interfaces:
+    System.IComparable`1[K]
+  Properties:
+    K Key      'get set' : 
+  Methods:
+    get_Key(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Key(K): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface QS._core_c_.Core.IBTNode`1[C]: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Type parameter: C
+  Properties:
+    C Parent   'get set' : 
+    C Left     'get set' : 
+    C Right    'get set' : 
+  Methods:
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Parent(C): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Left(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Left(C): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Right(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Right(C): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface QS._core_c_.Core.IBSTNode`2[K,C]: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Type parameter: K, System.IComparable`1[K]
+  Type parameter: C
+  Interfaces:
+    QS._core_c_.Core.ISNode`1[K]
+    System.IComparable`1[K]
+    QS._core_c_.Core.IBTNode`1[C]
+Class QS._core_c_.Core.Alarm: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(QS._core_c_.Core.IAlarmController, Double, Double, QS.Fx.Clock.AlarmCallback, System.Object): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS.Fx.Clock.IAlarm
+    System.IDisposable
+    QS._core_c_.Core.IBSTNode`2[System.Double,QS._core_c_.Core.Alarm]
+    QS._core_c_.Core.ISNode`1[System.Double]
+    System.IComparable`1[System.Double]
+    QS._core_c_.Core.IBTNode`1[QS._core_c_.Core.Alarm]
+  Properties:
+    System.Object Context 'get ' : 
+    Double Time 'get set' : 
+    Double Timeout 'get set' : 
+    QS.Fx.Clock.AlarmCallback Callback 'get ' : 
+    Boolean Registered 'get set' : 
+    Boolean Cancelled 'get ' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_Context(): PrivateScope, Public, HideBySig, SpecialName
+    get_Time(): PrivateScope, Public, HideBySig, SpecialName
+    set_Time(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Timeout(): PrivateScope, Public, HideBySig, SpecialName
+    set_Timeout(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Callback(): PrivateScope, Public, HideBySig, SpecialName
+    get_Registered(): PrivateScope, Public, HideBySig, SpecialName
+    set_Registered(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    Fire(): PrivateScope, Public, HideBySig
+    get_Cancelled(): PrivateScope, Public, HideBySig, SpecialName
+Class QS._core_c_.Core.AsynchronousCall: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.AsyncCallback, System.Object): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IAsyncResult
+  Properties:
+    System.Runtime.InteropServices.GCHandle GCHandle 'get set' : 
+  Methods:
+    Invoke(): PrivateScope, Public, HideBySig
+    get_GCHandle(): PrivateScope, Public, HideBySig, SpecialName
+    set_GCHandle(GCHandle): PrivateScope, Public, HideBySig, SpecialName
+Interface QS._core_c_.Core.IBST`2[K,C]: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Type parameter: K, System.IComparable`1[K]
+  Type parameter: C, QS._core_c_.Core.IBSTNode`2[K,C],  ReferenceType
+  Interfaces:
+    System.Collections.Generic.IEnumerable`1[C]
+    System.Collections.IEnumerable
+  Properties:
+    C Root     'get ' : 
+    Int32 Count 'get ' : 
+    Boolean IsEmpty 'get ' : 
+  Methods:
+    get_Root(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_IsEmpty(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Insert(C): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Insert(C, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Merge(IBST`2): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Remove(C): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class QS._core_c_.Core.BST`2[K,C]: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Type parameter: K, System.IComparable`1[K]
+  Type parameter: C, QS._core_c_.Core.IBSTNode`2[K,C],  ReferenceType
+  :QS.Fx.Inspection.Inspectable
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_c_.Core.IBST`2[K,C]
+    System.Collections.Generic.IEnumerable`1[C]
+    System.Collections.IEnumerable
+  Methods:
+    GetEnumerator(): PrivateScope, Public, HideBySig
+    BinarySearch(K, C&(Out), SearchResult&(Out)): PrivateScope, Public, HideBySig
+    BinarySearch(C, K, C&(Out), SearchResult&(Out)): PrivateScope, Public, Static, HideBySig
+Struct QS._core_c_.Core.BST`2+SearchResult[K,C]: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  Type parameter: K, System.IComparable`1[K]
+  Type parameter: C, QS._core_c_.Core.IBSTNode`2[K,C],  ReferenceType
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SearchResult Found = 0 : Public, Static, Literal, HasDefault
+    SearchResult Smaller = 1 : Public, Static, Literal, HasDefault
+    SearchResult Greater = 2 : Public, Static, Literal, HasDefault
+    SearchResult None = 3 : Public, Static, Literal, HasDefault
+Interface QS._core_c_.Core.IByteStream: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    Write(Object, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class QS._core_c_.Core.ByteStream: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(QS._core_c_.Core.IFile): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_c_.Core.IByteStream
+Struct QS._core_c_.Core.ChannelObject: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(Int32, Int64, Int64, Int32, Int32, System.Collections.Generic.IList`1[QS.Fx.Base.Block]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS.Fx.Serialization.ISerializable
+  Fields:
+    Int32 operation : Public
+    Int64 channel : Public
+    Int64 connection : Public
+    Int32 sequenceno : Public
+    Int32 datalength : Public
+    System.Collections.Generic.IList`1[QS.Fx.Base.Block] datablocks : Public
+  Properties:
+    QS.Fx.Serialization.SerializableInfo SerializableInfo 'get ' : 
+  Methods:
+    get_SerializableInfo(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    SerializeTo(ConsumableBlock&, IList`1&): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    DeserializeFrom(ConsumableBlock&, ConsumableBlock&): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    SerializeTo(Int32&(Out), IList`1&(Out)): PrivateScope, Public, HideBySig
+    DeserializeFrom(Int32, IList`1): PrivateScope, Public, HideBySig
+Class QS._core_c_.Core.ErrorCallback: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(String, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Struct QS._core_c_.Core.FileFlagsAndAttributes: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    QS._core_c_.Core.FileFlagsAndAttributes None = 0 : Public, Static, Literal, HasDefault
+    QS._core_c_.Core.FileFlagsAndAttributes WriteThrough = 1 : Public, Static, Literal, HasDefault
+Class QS._core_c_.Core.FileStream: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  :System.IO.Stream
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean CanRead 'get ' : 
+    Boolean CanSeek 'get ' : 
+    Boolean CanWrite 'get ' : 
+    Int64 Length 'get ' : 
+    Int64 Position 'get set' : 
+    Boolean CanTimeout 'get ' : 
+    Int32 WriteTimeout 'get set' : 
+    Int32 ReadTimeout 'get set' : 
+  Methods:
+    get_CanRead(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_CanSeek(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_CanWrite(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    Flush(): PrivateScope, Public, Virtual, HideBySig
+    get_Length(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Position(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_Position(Int64): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    Read(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    Seek(Int64, SeekOrigin): PrivateScope, Public, Virtual, HideBySig
+    SetLength(Int64): PrivateScope, Public, Virtual, HideBySig
+    Write(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    BeginRead(Byte[], Int32, Int32, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig
+    BeginWrite(Byte[], Int32, Int32, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig
+    get_CanTimeout(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    Close(): PrivateScope, Public, Virtual, HideBySig
+    EndRead(IAsyncResult): PrivateScope, Public, Virtual, HideBySig
+    EndWrite(IAsyncResult): PrivateScope, Public, Virtual, HideBySig
+    ReadByte(): PrivateScope, Public, Virtual, HideBySig
+    WriteByte(Byte): PrivateScope, Public, Virtual, HideBySig
+    get_WriteTimeout(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_WriteTimeout(Int32): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_ReadTimeout(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_ReadTimeout(Int32): PrivateScope, Public, Virtual, HideBySig, SpecialName
+Interface QS._core_c_.Core.IAlarmController: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    Register(IAlarm): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Unregister(IAlarm): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface QS._core_c_.Core.IChannel: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    Handle(ChannelObject): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface QS._core_c_.Core.IChannelController: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    Open(String, String, IChannel): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Close(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface QS._core_c_.Core.IFileController: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    OpenFile(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OpenFile(String, FileMode, FileAccess, FileShare, FileFlagsAndAttributes): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface QS._core_c_.Core.ICore: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    System.IDisposable
+    QS.Fx.Clock.IAlarmClock
+    QS.Fx.Clock.IClock
+    QS.Fx.Scheduling.IScheduler
+    QS._core_c_.Core.IFileController
+    QS._core_c_.Core.IChannelController
+  Properties:
+    QS.Fx.Clock.IClock PhysicalClock 'get ' : 
+    Boolean Running 'get ' : 
+    QS.Fx.Logging.ILogger Logger 'set' : 
+    QS.Fx.Logging.IEventLogger EventLogger 'set' : 
+    QS._core_c_.Statistics.IStatisticsController StatisticsController 'get ' : 
+  Events:
+    QS.Fx.Base.Callback OnInitialization: 
+    QS.Fx.Base.Callback OnCleanup: 
+    QS._core_c_.Core.ErrorCallback OnError: 
+  Methods:
+    get_PhysicalClock(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Start(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Stop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Running(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Listen(Address, ReceiveCallback, Object, Int32, Int32, Boolean, Int32, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_OnInitialization(Callback): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    remove_OnInitialization(Callback): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    add_OnCleanup(Callback): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    remove_OnCleanup(Callback): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    add_OnError(ErrorCallback): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    remove_OnError(ErrorCallback): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Logger(ILogger): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_EventLogger(IEventLogger): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetSender(Address, Int32, Int32, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_StatisticsController(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface QS._core_c_.Core.IFile: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    System.IDisposable
+  Properties:
+    System.String Name 'get ' : 
+    Int64 Length 'get ' : 
+  Methods:
+    get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Write(Int64, IntPtr, Int32, IOCompletionCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Write(Int64, Object, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Write(Int64, ArraySegment`1, IOCompletionCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Read(Int64, ArraySegment`1, IOCompletionCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    BeginWrite(Int64, ArraySegment`1, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    EndWrite(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    BeginRead(Int64, ArraySegment`1, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    EndRead(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Length(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface QS._core_c_.Core.IIOController: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    Int32 AllocateReference 'get ' : 
+  Methods:
+    get_AllocateReference(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    RegisterReference(Int32, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface QS._core_c_.Core.IListener: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    QS.Fx.Network.IListener
+    System.IDisposable
+    QS.Fx.Base.IParametrized
+  Properties:
+    QS._core_c_.Core.Address CombinedAddress 'get ' : 
+  Methods:
+    get_CombinedAddress(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Start(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Stop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface QS._core_c_.Core.IListenerController: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    Unregister(IListener): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class QS._core_c_.Core.InOrderWalker`1[C]: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Type parameter: C, QS._core_c_.Core.IBTNode`1[C],  ReferenceType
+    Void .ctor(C): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.Collections.Generic.IEnumerator`1[C]
+    System.IDisposable
+    System.Collections.IEnumerator
+Interface QS._core_c_.Core.IPriorityQueue`1[C]: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Type parameter: C
+  Interfaces:
+    System.Collections.Generic.IEnumerable`1[C]
+    System.Collections.IEnumerable
+  Properties:
+    C Head     'get ' : 
+    Int32 Count 'get ' : 
+    Boolean IsEmpty 'get ' : 
+  Methods:
+    Enqueue(C): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Dequeue(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Remove(C): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Clear(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Head(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_IsEmpty(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface QS._core_c_.Core.IQueue`1[C]: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Type parameter: C, QS._core_c_.Core.ISLLNode`1[C],  ReferenceType
+  Properties:
+    Int32 Count 'get ' : 
+    Boolean IsEmpty 'get ' : 
+  Methods:
+    Enqueue(C): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Dequeue(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_IsEmpty(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface QS._core_c_.FlowControl3.IRateControlled: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    Double MaximumRate 'get set' : 
+  Methods:
+    get_MaximumRate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_MaximumRate(Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface QS._core_c_.Core.ISender: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    QS._core_c_.FlowControl3.IRateControlled
+    QS.Fx.Network.ISender
+    QS.Fx.Base.IParametrized
+  Properties:
+    QS._core_c_.Core.Address CombinedAddress 'get ' : 
+    Int32 MTU  'get set' : 
+    Int32 MaximumConcurrency 'get set' : 
+    QS._core_c_.RateControl.IRateController RateController 'get set' : 
+  Methods:
+    get_CombinedAddress(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MTU(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_MTU(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MaximumConcurrency(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_MaximumConcurrency(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_RateController(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_RateController(IRateController): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface QS._core_c_.Core.ISenderController: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    ScheduleSender(ISender): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ReleaseResources(Int32, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface QS._core_c_.Core.ISLLNode`1[C]: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Type parameter: C, QS._core_c_.Core.ISLLNode`1[C],  ReferenceType
+  Properties:
+    C Next     'get set' : 
+  Methods:
+    get_Next(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Next(C): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface QS._core_c_.Core.ITransmitter: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+Interface QS._core_c_.Core.ITransmitterController: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    QS._core_c_.Core.Address CombinedAddress 'get ' : 
+  Methods:
+    get_CombinedAddress(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    RecycleTransmitter(ITransmitter, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    LogTransmitOverheads(ITransmitter, Double, Double, Double, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    LogTransmitCompletionOverheads(ITransmitter, Double, Double, Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class QS._core_c_.Core.ListenerInfo: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Properties:
+    QS.Fx.Base.IParametersInfo ParametersInfo 'get ' : 
+  Methods:
+    get_ParametersInfo(): PrivateScope, Public, Static, HideBySig, SpecialName
+Class QS._core_c_.Core.ListenerInfo+Parameters: AutoLayout, AnsiClass, Class, NestedPublic, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    System.String HighPriority = High Priority : Public, Static, Literal, HasDefault
+    System.String DrainSynchronously = Drain Synchronously : Public, Static, Literal, HasDefault
+    System.String BufferSize = Buffer Size : Public, Static, Literal, HasDefault
+    System.String NumberOfBuffers = Number of Buffers : Public, Static, Literal, HasDefault
+    System.String AdfBufferSize = Adf Buffer Size : Public, Static, Literal, HasDefault
+Class QS._core_c_.Core.SenderInfo: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Properties:
+    QS.Fx.Base.IParametersInfo ParametersInfo 'get ' : 
+  Methods:
+    get_ParametersInfo(): PrivateScope, Public, Static, HideBySig, SpecialName
+Class QS._core_c_.Core.SenderInfo+Parameters: AutoLayout, AnsiClass, Class, NestedPublic, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    System.String HighPriority = High Priority : Public, Static, Literal, HasDefault
+    System.String MaximumConcurrency = Maximum Concurrency : Public, Static, Literal, HasDefault
+    System.String MTU = MTU : Public, Static, Literal, HasDefault
+    System.String AdfBufferSize = Adf Buffer Size : Public, Static, Literal, HasDefault
+    System.String RateController = Rate Controller : Public, Static, Literal, HasDefault
+    System.String MaximumRate = Maximum Rate : Public, Static, Literal, HasDefault
+Class QS._core_c_.Core.SLLNode: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_c_.Core.ISLLNode`1[QS._core_c_.Core.SLLNode]
+Class QS._core_c_.Core.Sockets: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    Boolean DisableIPMulticastLoopback : Public, Static
+  Methods:
+    CreateSendSocket(Address, Int32): PrivateScope, Public, Static, HideBySig
+    CreateReceiveSocket(Address, Boolean, Int32): PrivateScope, Public, Static, HideBySig
+Class QS._core_c_.Core.SplayTree`2[K,C]: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  Type parameter: K, System.IComparable`1[K]
+  Type parameter: C, QS._core_c_.Core.IBSTNode`2[K,C],  ReferenceType
+  :QS._core_c_.Core.BST`2[K,C]
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_c_.Core.IPriorityQueue`1[C]
+Interface QS._core_c_.Diagnostics2.IComponent: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    System.String Name 'get set' : 
+    System.String Path 'get ' : 
+    QS._core_c_.Diagnostics2.ComponentClass Class 'get ' : 
+    QS._core_c_.Diagnostics2.IComponent Container 'get set' : 
+    QS._core_c_.Synchronization.NonblockingLock Lock 'get ' : 
+  Methods:
+    get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Name(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Path(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Class(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Container(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Container(IComponent): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Lock(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class QS._core_c_.Diagnostics2.Component: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_c_.Diagnostics2.IComponent
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Struct QS._core_c_.Diagnostics2.ComponentClass: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    QS._core_c_.Diagnostics2.ComponentClass Property = 0 : Public, Static, Literal, HasDefault
+    QS._core_c_.Diagnostics2.ComponentClass Container = 1 : Public, Static, Literal, HasDefault
+Interface QS._core_c_.Diagnostics2.IContainer: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    QS._core_c_.Diagnostics2.IComponent
+  Properties:
+    QS._core_c_.Diagnostics2.IComponent[] Subcomponents 'get ' : 
+  Methods:
+    get_Subcomponents(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Register(String, IComponent): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Register(String, IComponent, RegisteringMode): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Unregister(IComponent): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class QS._core_c_.Diagnostics2.Container: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :QS._core_c_.Diagnostics2.Component
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_c_.Diagnostics2.IContainer
+Class QS._core_c_.Diagnostics2.Helper: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    RegisterLocal(IContainer, Object): PrivateScope, Public, Static, HideBySig
+    Collect(IContainer): PrivateScope, Public, Static, HideBySig
+Struct QS._core_c_.Diagnostics2.RegisteringMode: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    QS._core_c_.Diagnostics2.RegisteringMode Normal = 0 : Public, Static, Literal, HasDefault
+    QS._core_c_.Diagnostics2.RegisteringMode Override = 1 : Public, Static, Literal, HasDefault
+    QS._core_c_.Diagnostics2.RegisteringMode Reregister = 2 : Public, Static, Literal, HasDefault
+    QS._core_c_.Diagnostics2.RegisteringMode Force = 3 : Public, Static, Literal, HasDefault
+Interface QS._core_c_.Diagnostics2.IModule: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    QS._core_c_.Diagnostics2.IComponent Component 'get ' : 
+  Methods:
+    get_Component(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface QS._core_c_.Diagnostics2.IProperty: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    QS._core_c_.Diagnostics2.IComponent
+  Properties:
+    Boolean ReadOnly 'get ' : 
+    System.Object Value 'get set' : 
+  Methods:
+    get_ReadOnly(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Value(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Value(Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class QS._core_c_.Diagnostics2.ModuleAttribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Attribute
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Name 'get ' : 
+  Methods:
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+Class QS._core_c_.Diagnostics2.Property: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :QS._core_c_.Diagnostics2.Component
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Object): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Object, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Object, System.Reflection.FieldInfo): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Object, System.Reflection.PropertyInfo): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_c_.Diagnostics2.IProperty
+Class QS._core_c_.Diagnostics2.PropertyAttribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Attribute
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Name 'get ' : 
+  Methods:
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+Class QS._core_c_.Diagnostics.ComponentAttribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :QS.Fx.Base.InspectableAttribute
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class QS._core_c_.Diagnostics.ComponentCollectionAttribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :QS.Fx.Base.InspectableAttribute
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class QS._core_c_.Diagnostics.ComponentContainerAttribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Attribute
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(QS.Fx.Diagnostics.SelectionOption): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    QS.Fx.Diagnostics.SelectionOption SelectionOption 'get ' : 
+  Methods:
+    get_SelectionOption(): PrivateScope, Public, HideBySig, SpecialName
+Interface QS._core_c_.Diagnostics.IComponentContainer: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    QS.Fx.Diagnostics.IDiagnosticsComponent
+    System.Collections.Generic.IEnumerable`1[System.Collections.Generic.KeyValuePair`2[System.String,QS.Fx.Diagnostics.IDiagnosticsComponent]]
+    System.Collections.IEnumerable
+Interface QS._core_c_.Diagnostics.IDataCollector: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    QS.Fx.Diagnostics.IDiagnosticsComponent
+  Properties:
+    QS._core_e_.Data.IDataSet DataSet 'get ' : 
+  Methods:
+    get_DataSet(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class QS._core_c_.Diagnostics.IgnoreAttribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Attribute
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class QS._core_c_.Helpers.CollectionHelper: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    List2Array(IList`1): PrivateScope, Public, Static, HideBySig
+    ToStringConcatenated(IEnumerable`1): PrivateScope, Public, Static, HideBySig
+    ToStringSeparated(IEnumerable`1, String): PrivateScope, Public, Static, HideBySig
+Class QS._core_c_.Helpers.Path: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    RelativePath(String, String): PrivateScope, Public, Static, HideBySig
+Class QS._core_c_.Helpers.ToString: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    Exception(Exception): PrivateScope, Public, Static, HideBySig
+    Attributes(AttributeSet): PrivateScope, Public, Static, HideBySig
+    Attributes(IAttributeCollection): PrivateScope, Public, Static, HideBySig
+    CallbackException(Delegate, Exception): PrivateScope, Public, Static, HideBySig
+    Strings(String[]): PrivateScope, Public, Static, HideBySig
+    Object(Object): PrivateScope, Public, Static, HideBySig
+    ObjectRef(Object): PrivateScope, Public, Static, HideBySig
+    ReceivedObject(NetworkAddress, Object): PrivateScope, Public, Static, HideBySig
+    ReceivedObject(InstanceID, Object): PrivateScope, Public, Static, HideBySig
+    Message(IMessage): PrivateScope, Public, Static, HideBySig
+    Delegate(Delegate): PrivateScope, Public, Static, HideBySig
+Interface QS._core_c_.RateControl.IRateController: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    Boolean Ready 'get ' : 
+    Double MaximumRate 'get set' : 
+  Events:
+    QS.Fx.Base.Callback OnReady: 
+  Methods:
+    get_Ready(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Consume(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_OnReady(Callback): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    remove_OnReady(Callback): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MaximumRate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_MaximumRate(Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface QS._core_c_.RateControl.IRateControllerClass: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    Create(IClock, IAlarmClock, ILogger, Double, IStatisticsController): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class QS._core_c_.RateControl.RateController1: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :QS.Fx.Inspection.Inspectable
+    Void .ctor(QS.Fx.Clock.IClock, QS.Fx.Clock.IAlarmClock, Double, Double, QS._core_c_.Statistics.IStatisticsController): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_c_.RateControl.IRateController
+    QS._core_c_.Diagnostics2.IModule
+  Properties:
+    Double MaximumCredits 'get set' : 
+    Double LowCredits 'get set' : 
+    Double HighCredits 'get set' : 
+    Double RecoveryMaxCount 'get set' : 
+  Methods:
+    get_MaximumCredits(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaximumCredits(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_LowCredits(): PrivateScope, Public, HideBySig, SpecialName
+    set_LowCredits(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_HighCredits(): PrivateScope, Public, HideBySig, SpecialName
+    set_HighCredits(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_RecoveryMaxCount(): PrivateScope, Public, HideBySig, SpecialName
+    set_RecoveryMaxCount(Double): PrivateScope, Public, HideBySig, SpecialName
+Class QS._core_c_.RateControl.RateController1+Class: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+    Void .ctor(Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_c_.RateControl.IRateControllerClass
+  Properties:
+    Double MaximumCredits 'get set' : 
+  Methods:
+    get_MaximumCredits(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaximumCredits(Double): PrivateScope, Public, HideBySig, SpecialName
+Class QS._core_c_.Serialization.BLOBAttribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Attribute
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Interface QS._core_c_.Serialization.ISerializer: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    Serialize(Object, Stream): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Deserialize(Stream): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class QS._core_c_.Serialization.NonSerializedAttribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Attribute
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class QS._core_c_.Serialization.Serializer1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Interfaces:
+    QS._core_c_.Serialization.ISerializer
+  Fields:
+    QS._core_c_.Serialization.Serializer1 Serializer : Public, Static, InitOnly
+Interface QS._core_c_.Statistics.ISamples1D: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    QS._core_c_.Diagnostics.IDataCollector
+    QS.Fx.Diagnostics.IDiagnosticsComponent
+  Methods:
+    Add(Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface QS._core_c_.Statistics.IFileOutput: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    System.String Filename 'get ' : 
+  Methods:
+    get_Filename(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class QS._core_c_.Statistics.File1D: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :QS.Fx.Inspection.Inspectable
+    Void .ctor(QS._core_c_.Core.IFile, QS.Fx.Clock.IClock, Int32, Int32, Double, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+    QS._core_c_.Statistics.ISamples1D
+    QS._core_c_.Diagnostics.IDataCollector
+    QS.Fx.Diagnostics.IDiagnosticsComponent
+    QS._core_c_.Statistics.IFileOutput
+  Methods:
+    Add(Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Flush(): PrivateScope, Public, HideBySig
+Interface QS._core_c_.Statistics.ISamples2D: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    QS._core_c_.Diagnostics.IDataCollector
+    QS.Fx.Diagnostics.IDiagnosticsComponent
+  Methods:
+    Add(Double, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class QS._core_c_.Statistics.File2D: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :QS.Fx.Inspection.Inspectable
+    Void .ctor(QS._core_c_.Core.IFile, QS.Fx.Clock.IClock, Int32, Int32, Double, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+    QS._core_c_.Statistics.ISamples2D
+    QS._core_c_.Diagnostics.IDataCollector
+    QS.Fx.Diagnostics.IDiagnosticsComponent
+    QS._core_c_.Statistics.IFileOutput
+  Methods:
+    Add(Double, Double): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Flush(): PrivateScope, Public, HideBySig
+Interface QS._core_c_.Statistics.IStatisticsController: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Allocate1D(String, String, String, String, String, String, String, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Allocate2D(String, String, String, String, String, String, String, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Close(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class QS._core_c_.Statistics.FileController: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :QS.Fx.Inspection.Inspectable
+    Void .ctor(QS._core_c_.Core.ICore, QS.Fx.Logging.ILogger, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_c_.Statistics.IStatisticsController
+    System.IDisposable
+  Fields:
+    Int32 DefaultMinimumChunkSize = 100 : Public, Static, Literal, HasDefault
+    Int32 DefaultMaximumChunkSize = 100000 : Public, Static, Literal, HasDefault
+    Double DefaultMaximumRate = 1 : Public, Static, Literal, HasDefault
+Interface QS._core_c_.Synchronization.IItem`1[C]: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Type parameter: C, QS._core_c_.Synchronization.IItem`1[C],  ReferenceType
+  Properties:
+    C Next     'get set' : 
+  Methods:
+    get_Next(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Next(C): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface QS._core_c_.Synchronization.ILinkable`1[C]: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Type parameter: C, QS._core_c_.Synchronization.ILinkable`1[C],  ReferenceType
+  Properties:
+    C Next     'get set' : 
+  Methods:
+    get_Next(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Next(C): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Struct QS._core_c_.Serialization.SerializationClass: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Byte value__ : Public, SpecialName, RTSpecialName
+    QS._core_c_.Serialization.SerializationClass Base3_ISerializable = 0 : Public, Static, Literal, HasDefault
+Interface QS._core_c_.Synchronization.INonblockingWorker`1[C]: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Type parameter: C, QS._core_c_.Synchronization.IItem`1[C],  ReferenceType
+  Methods:
+    Process(C): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class QS._core_c_.Synchronization.NonblockingLock: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Lock(NonblockingLock[]): PrivateScope, Public, Static, HideBySig
+    Unlock(NonblockingLock[]): PrivateScope, Public, Static, HideBySig
+Class QS._core_c_.Synchronization.NonblockingQueue`1[C]: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Type parameter: C, QS._core_c_.Synchronization.IItem`1[C],  ReferenceType
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Enqueue(C): PrivateScope, Public, HideBySig
+    Dequeue(): PrivateScope, Public, HideBySig
+Class QS._core_x_.Base.GetCallback`1[C]: AutoLayout, AnsiClass, Class, Public, Sealed
+  Type parameter: C
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class QS._core_x_.Base.Parameter`1[C]: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  Type parameter: C
+    Void .ctor(System.String, C): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS.Fx.Base.IParameter`1[C]
+    QS.Fx.Base.IParameter
+    QS.Fx.Base.IParameterInfo
+Class QS._core_x_.Base.ParameterCallbacks`1[C]: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  Type parameter: C
+    Void .ctor(System.String, QS._core_x_.Base.SetCallback`1[C], QS._core_x_.Base.GetCallback`1[C]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, QS._core_x_.Base.SetCallback`1[C]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, QS._core_x_.Base.GetCallback`1[C]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS.Fx.Base.IParameter`1[C]
+    QS.Fx.Base.IParameter
+    QS.Fx.Base.IParameterInfo
+Class QS._core_x_.Base.ParameterField`1[C]: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  Type parameter: C
+    Void .ctor(System.String, System.Object, System.Reflection.FieldInfo, Boolean, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS.Fx.Base.IParameter`1[C]
+    QS.Fx.Base.IParameter
+    QS.Fx.Base.IParameterInfo
+Class QS._core_x_.Base.ParameterInfo: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(System.String, System.Type): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Type, QS.Fx.Base.ParameterAccess): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Type, Boolean, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS.Fx.Base.IParameterInfo
+Class QS._core_x_.Base.ParameterProperty`1[C]: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  Type parameter: C
+    Void .ctor(System.String, System.Object, System.Reflection.PropertyInfo, Boolean, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS.Fx.Base.IParameter`1[C]
+    QS.Fx.Base.IParameter
+    QS.Fx.Base.IParameterInfo
+Class QS._core_x_.Base.Parameters: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(QS.Fx.Base.IParameter[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS.Fx.Base.IParameters
+    QS.Fx.Base.IParametersInfo
+  Methods:
+    RegisterLocal(Object): PrivateScope, Public, HideBySig
+    Get(IParameters, String, C): PrivateScope, Public, Static, HideBySig
+    Add(IParameter): PrivateScope, Public, HideBySig
+Class QS._core_x_.Base.ParametersInfo: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(QS.Fx.Base.IParameterInfo[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS.Fx.Base.IParametersInfo
+Class QS._core_x_.Base.SetCallback`1[C]: AutoLayout, AnsiClass, Class, Public, Sealed
+  Type parameter: C
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(C): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(C, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class QS._core_x_.Unmanaged.IncomingMsg: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS.Fx.Serialization.ISerializable
+  Fields:
+    IntPtr data : Public
+    UInt32 offset : Public
+    UInt32 size : Public
+    UInt32 channel : Public
+    UInt64 cookie : Public
+Class QS._core_x_.Unmanaged.OutgoingMsg: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(UInt32, IntPtr, UInt32, Boolean, UInt64): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_c_.Base6.IAsynchronous`1[QS._core_c_.Base3.Message]
+    QS._core_c_.Base6.IAsynchronous`2[QS._core_c_.Base3.Message,System.Object]
+    QS.Fx.Serialization.ISerializable
+  Fields:
+    UInt32 channel : Public
+    IntPtr data : Public
+    UInt32 size : Public
+    Boolean respond : Public
+    UInt64 cookie : Public
+    UInt32 module : Public
+    QS._core_c_.Base6.CompletionCallback`1[System.Object] callback : Public
+Class QS._core_x_.Unmanaged.OutgoingMsgCallback: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(OutgoingMsg): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(OutgoingMsg, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface QS._core_x_.Uplink_old_.IConnection: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    System.IDisposable
+    QS._core_c_.Base6.ISink`1[QS._core_c_.Base6.IAsynchronous`1[QS._core_c_.Base3.Message]]
+Interface QS._core_x_.Video.IVideo: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    IntPtr Window 'get ' : 
+    System.Drawing.Rectangle Rectangle 'get set' : 
+    QS._core_x_.Video.VideoType Type 'get ' : 
+    Int64 Length 'get ' : 
+    Int64 Position 'get ' : 
+    Int64 MinBuffered 'get ' : 
+    Int64 MaxBuffered 'get ' : 
+  Methods:
+    get_Window(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Rectangle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Rectangle(Rectangle): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Type(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Length(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Position(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MinBuffered(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MaxBuffered(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Start(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Stop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Append(Block): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Struct QS._core_x_.Video.VideoType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    QS._core_x_.Video.VideoType MPEG1System = 0 : Public, Static, Literal, HasDefault
+    QS._core_x_.Video.VideoType MPEG1Audio = 1 : Public, Static, Literal, HasDefault
+    QS._core_x_.Video.VideoType MPEG1Video = 2 : Public, Static, Literal, HasDefault
+    QS._core_x_.Video.VideoType MPEG1VideoCD = 3 : Public, Static, Literal, HasDefault
+    QS._core_x_.Video.VideoType Avi = 4 : Public, Static, Literal, HasDefault
+    QS._core_x_.Video.VideoType QTMovie = 5 : Public, Static, Literal, HasDefault
+    QS._core_x_.Video.VideoType WAVE = 6 : Public, Static, Literal, HasDefault
+Class QS._assembly_liveobjects_4: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    _initialize(): PrivateScope, Public, Static, HideBySig
+Interface QS._core_e_.Repository.IAttribute: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    QS.Fx.Inspection.IAttribute
+  Properties:
+    QS._core_e_.Repository.IRepository Repository 'get ' : 
+    System.String Key 'get ' : 
+    System.String Ref 'get ' : 
+  Methods:
+    get_Repository(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Key(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Ref(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class QS._core_e_.Repository.Attribute: AutoLayout, AnsiClass, Class, Public, Abstract, Serializable, BeforeFieldInit
+    Void .ctor(QS._core_e_.Repository.IRepository, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_e_.Repository.IAttribute
+    QS.Fx.Inspection.IAttribute
+  Properties:
+    QS._core_e_.Repository.IRepository Repository 'get set' : 
+    System.String Key 'get set' : 
+    System.String Name 'get set' : 
+  Methods:
+    get_Repository(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Repository(IRepository): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Key(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Key(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    set_Name(String): PrivateScope, Public, HideBySig, SpecialName
+Interface QS._core_e_.Data.IAxis: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    System.String Name 'get set' : 
+    System.String Units 'get set' : 
+    System.String Description 'get set' : 
+    QS._core_e_.Data.Range Range 'get set' : 
+  Methods:
+    get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Name(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Units(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Units(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Description(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Description(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Range(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Range(Range): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class QS._core_e_.Data.Axis: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.String, QS._core_e_.Data.Range, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_e_.Data.IAxis
+    QS.Fx.Serialization.ISerializable
+Interface QS._core_e_.Data.IData: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    System.String Name 'get ' : 
+    System.String Description 'get ' : 
+    QS._core_e_.Data.IAxis XAxis 'get ' : 
+    QS._core_e_.Data.IAxis YAxis 'get ' : 
+  Methods:
+    get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Description(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_XAxis(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_YAxis(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Draw(Graphics, RectangleF, IView, IDrawingContext): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Crop(IView): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetStatistics(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface QS._core_e_.Data.IDataSet: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    QS._core_e_.Data.Rectangle Range 'get ' : 
+  Methods:
+    downsample(Size): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    draw(Graphics): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Range(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class QS._core_e_.Data.Data1D: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(QS._core_e_.Data.DataSeries): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, QS._core_e_.Data.DataSeries): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, Double[], System.String, System.String, System.String, System.String, System.String, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, QS._core_e_.Data.IAxis, QS._core_e_.Data.IAxis, Double[], System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_e_.Data.IData
+    QS.Fx.Serialization.ISerializable
+    QS._core_e_.Data.IDataSet
+    QS._core_c_.Diagnostics.IDataCollector
+    QS.Fx.Diagnostics.IDiagnosticsComponent
+  Properties:
+    Double[] Data 'get ' : 
+    QS._core_e_.Data.IDataSet AsDataSeries 'get ' : 
+  Methods:
+    get_Data(): PrivateScope, Public, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_AsDataSeries(): PrivateScope, Public, HideBySig, SpecialName
+Class QS._core_e_.Data.Data2D: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(QS._core_e_.Data.XYSeries): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(QS._core_e_.Data.XY[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, QS._core_e_.Data.XY[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, QS._core_e_.Data.XY[], System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, QS._core_e_.Data.XY[], System.String, System.String, System.String, System.String, System.String, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_e_.Data.IData
+    QS.Fx.Serialization.ISerializable
+    QS._core_e_.Data.IDataSet
+    QS._core_c_.Diagnostics.IDataCollector
+    QS.Fx.Diagnostics.IDiagnosticsComponent
+  Properties:
+    QS._core_e_.Data.XY[] Data 'get ' : 
+    QS._core_e_.Data.IDataSet AsXYSeries 'get ' : 
+  Methods:
+    get_Data(): PrivateScope, Public, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_AsXYSeries(): PrivateScope, Public, HideBySig, SpecialName
+Class QS._core_e_.Data.DataCo: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_e_.Data.IData
+    QS._core_e_.Data.IDataSet
+    QS.Fx.Serialization.ISerializable
+    QS._core_c_.Diagnostics.IDataCollector
+    QS.Fx.Diagnostics.IDiagnosticsComponent
+  Properties:
+    System.Collections.Generic.IEnumerable`1[QS._core_e_.Data.IData] Components 'get ' : 
+  Methods:
+    Add(IData): PrivateScope, Public, HideBySig
+    get_Components(): PrivateScope, Public, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class QS._core_e_.Data.DataSeries: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Double[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_e_.Data.IDataSet
+    QS.Fx.Serialization.ISerializable
+    QS._core_c_.Diagnostics.IDataCollector
+    QS.Fx.Diagnostics.IDiagnosticsComponent
+  Properties:
+    QS._core_e_.Data.Rectangle Range 'get ' : 
+    Double[] Data 'get set' : 
+    Double Item [Int32] 'get set' : 
+    Statistics CurrentStatistics 'get ' : 
+    QS._core_e_.Data.IDataSet DownsampleTo1000 'get ' : 
+    QS._core_e_.Data.DataSeries CreateCopy 'get ' : 
+    QS._core_e_.Data.IDataSet RawData 'get ' : 
+    QS._core_e_.Data.IDataSet MeaningfulData 'get ' : 
+    QS._core_e_.Data.DataSeries SortedCopy 'get ' : 
+    QS._core_e_.Data.IDataSet Delta 'get ' : 
+    QS._core_e_.Data.IDataSet Cumulative_Sum 'get ' : 
+    QS._core_e_.Data.IDataSet Cumulative_Average 'get ' : 
+    QS._core_e_.Data.IDataSet DeltaOfSorted 'get ' : 
+    QS._core_e_.Data.IDataSet MovingAverage500 'get ' : 
+    QS._core_e_.Data.IDataSet MovingAverage200 'get ' : 
+    QS._core_e_.Data.IDataSet MovingAverage100 'get ' : 
+    QS._core_e_.Data.IDataSet MovingAverage50 'get ' : 
+    QS._core_e_.Data.IDataSet MovingAverage20 'get ' : 
+    QS._core_e_.Data.IDataSet SortDeltaMovAvgInvSort 'get ' : 
+    QS._core_e_.Data.IDataSet SortDeltaInvSort 'get ' : 
+    QS._core_e_.Data.IDataSet SortDeltaMovAvgInv 'get ' : 
+    QS._core_e_.Data.IDataSet InverseOfDeltaOfSorted 'get ' : 
+    QS._core_e_.Data.IDataSet InverseOfSmoothedDeltaOfSorted 'get ' : 
+    QS._core_e_.Data.IDataSet Smoothed 'get ' : 
+    QS._core_e_.Data.IDataSet Smoothed_InverseDelta 'get ' : 
+    QS._core_e_.Data.IDataSet InverseDelta_Smoothed 'get ' : 
+    QS._core_e_.Data.IDataSet Log10 'get ' : 
+    QS._core_e_.Data.IDataSet InverseDelta 'get ' : 
+    QS._core_e_.Data.IDataSet Inverse 'get ' : 
+    QS._core_e_.Data.IDataSet SortedInverseDelta 'get ' : 
+    QS._core_e_.Data.IDataSet AsXYSeries 'get ' : 
+    QS._core_e_.Data.IDataSet FlippedXY 'get ' : 
+    QS._core_e_.Data.IDataSet CumulativeDistribution 'get ' : 
+    QS._core_e_.Data.IDataSet Distribution 'get ' : 
+    QS._core_e_.Data.IDataSet DistributionLog10 'get ' : 
+    QS._core_e_.Data.IDataSet Rate 'get ' : 
+    QS._core_e_.Data.IDataSet Rate2 'get ' : 
+    QS._core_e_.Data.IDataSet SortDeltaInverseXY 'get ' : 
+    QS._core_e_.Data.IDataSet Rate3 'get ' : 
+    QS._core_e_.Data.IDataSet SlopesR100 'get ' : 
+    QS._core_e_.Data.IDataSet SlopesR1000 'get ' : 
+    QS._core_e_.Data.IDataSet DigitizedSlopes20 'get ' : 
+    QS._core_e_.Data.IDataSet DigitizedSlopes100 'get ' : 
+    QS._core_e_.Data.IDataSet Rate1s 'get ' : 
+    QS._core_e_.Data.IDataSet InterpolateTo1000 'get ' : 
+    QS._core_e_.Data.IDataSet Rate1000i 'get ' : 
+    QS._core_e_.Data.IDataSet Rate500i 'get ' : 
+    QS._core_e_.Data.IDataSet Rate200i 'get ' : 
+    QS._core_e_.Data.IDataSet Rate100i 'get ' : 
+    QS._core_e_.Data.IDataSet Rate50i 'get ' : 
+    QS._core_e_.Data.IDataSet Rate20i 'get ' : 
+    QS._core_e_.Data.IDataSet Rate10i 'get ' : 
+    QS._core_e_.Data.IDataSet NonZero 'get ' : 
+    QS._core_e_.Data.IDataSet HasValue 'get ' : 
+    QS._core_e_.Data.IDataSet L 'get ' : 
+    QS._core_e_.Data.IDataSet R 'get ' : 
+    QS._core_e_.Data.IDataSet i0 'get ' : 
+    QS._core_e_.Data.IDataSet i1 'get ' : 
+    QS._core_e_.Data.IDataSet i2 'get ' : 
+    QS._core_e_.Data.IDataSet i3 'get ' : 
+    QS._core_e_.Data.IDataSet i4 'get ' : 
+    QS._core_e_.Data.IDataSet i5 'get ' : 
+    QS._core_e_.Data.IDataSet i6 'get ' : 
+    QS._core_e_.Data.IDataSet i7 'get ' : 
+    QS._core_e_.Data.IDataSet i8 'get ' : 
+    QS._core_e_.Data.IDataSet i9 'get ' : 
+  Methods:
+    get_i5(): PrivateScope, Public, HideBySig, SpecialName
+    get_i6(): PrivateScope, Public, HideBySig, SpecialName
+    get_i7(): PrivateScope, Public, HideBySig, SpecialName
+    get_i8(): PrivateScope, Public, HideBySig, SpecialName
+    get_i9(): PrivateScope, Public, HideBySig, SpecialName
+    op_Explicit(DataSeries): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Explicit(Data1D): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Range(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Data(): PrivateScope, Public, HideBySig, SpecialName
+    set_Data(Double[]): PrivateScope, Public, HideBySig, SpecialName
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    set_Item(Int32, Double): PrivateScope, Public, HideBySig, SpecialName
+    recalculateStatistics(): PrivateScope, Public, HideBySig
+    get_CurrentStatistics(): PrivateScope, Public, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    draw(Graphics): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    downsample(Size): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    downsample(UInt32): PrivateScope, Public, HideBySig
+    get_DownsampleTo1000(): PrivateScope, Public, HideBySig, SpecialName
+    get_CreateCopy(): PrivateScope, Public, HideBySig, SpecialName
+    sort(): PrivateScope, Public, HideBySig
+    get_RawData(): PrivateScope, Public, HideBySig, SpecialName
+    get_MeaningfulData(): PrivateScope, Public, HideBySig, SpecialName
+    get_SortedCopy(): PrivateScope, Public, HideBySig, SpecialName
+    get_Delta(): PrivateScope, Public, HideBySig, SpecialName
+    get_Cumulative_Sum(): PrivateScope, Public, HideBySig, SpecialName
+    get_Cumulative_Average(): PrivateScope, Public, HideBySig, SpecialName
+    get_DeltaOfSorted(): PrivateScope, Public, HideBySig, SpecialName
+    get_MovingAverage500(): PrivateScope, Public, HideBySig, SpecialName
+    get_MovingAverage200(): PrivateScope, Public, HideBySig, SpecialName
+    get_MovingAverage100(): PrivateScope, Public, HideBySig, SpecialName
+    get_MovingAverage50(): PrivateScope, Public, HideBySig, SpecialName
+    get_MovingAverage20(): PrivateScope, Public, HideBySig, SpecialName
+    get_SortDeltaMovAvgInvSort(): PrivateScope, Public, HideBySig, SpecialName
+    get_SortDeltaInvSort(): PrivateScope, Public, HideBySig, SpecialName
+    get_SortDeltaMovAvgInv(): PrivateScope, Public, HideBySig, SpecialName
+    get_InverseOfDeltaOfSorted(): PrivateScope, Public, HideBySig, SpecialName
+    get_InverseOfSmoothedDeltaOfSorted(): PrivateScope, Public, HideBySig, SpecialName
+    get_Smoothed(): PrivateScope, Public, HideBySig, SpecialName
+    get_Smoothed_InverseDelta(): PrivateScope, Public, HideBySig, SpecialName
+    get_InverseDelta_Smoothed(): PrivateScope, Public, HideBySig, SpecialName
+    get_Log10(): PrivateScope, Public, HideBySig, SpecialName
+    get_InverseDelta(): PrivateScope, Public, HideBySig, SpecialName
+    get_Inverse(): PrivateScope, Public, HideBySig, SpecialName
+    get_SortedInverseDelta(): PrivateScope, Public, HideBySig, SpecialName
+    get_AsXYSeries(): PrivateScope, Public, HideBySig, SpecialName
+    get_FlippedXY(): PrivateScope, Public, HideBySig, SpecialName
+    get_CumulativeDistribution(): PrivateScope, Public, HideBySig, SpecialName
+    get_Distribution(): PrivateScope, Public, HideBySig, SpecialName
+    get_DistributionLog10(): PrivateScope, Public, HideBySig, SpecialName
+    get_Rate(): PrivateScope, Public, HideBySig, SpecialName
+    get_Rate2(): PrivateScope, Public, HideBySig, SpecialName
+    get_SortDeltaInverseXY(): PrivateScope, Public, HideBySig, SpecialName
+    get_Rate3(): PrivateScope, Public, HideBySig, SpecialName
+    get_SlopesR100(): PrivateScope, Public, HideBySig, SpecialName
+    get_SlopesR1000(): PrivateScope, Public, HideBySig, SpecialName
+    get_DigitizedSlopes20(): PrivateScope, Public, HideBySig, SpecialName
+    get_DigitizedSlopes100(): PrivateScope, Public, HideBySig, SpecialName
+    get_Rate1s(): PrivateScope, Public, HideBySig, SpecialName
+    get_InterpolateTo1000(): PrivateScope, Public, HideBySig, SpecialName
+    get_Rate1000i(): PrivateScope, Public, HideBySig, SpecialName
+    get_Rate500i(): PrivateScope, Public, HideBySig, SpecialName
+    get_Rate200i(): PrivateScope, Public, HideBySig, SpecialName
+    get_Rate100i(): PrivateScope, Public, HideBySig, SpecialName
+    get_Rate50i(): PrivateScope, Public, HideBySig, SpecialName
+    get_Rate20i(): PrivateScope, Public, HideBySig, SpecialName
+    get_Rate10i(): PrivateScope, Public, HideBySig, SpecialName
+    get_NonZero(): PrivateScope, Public, HideBySig, SpecialName
+    get_HasValue(): PrivateScope, Public, HideBySig, SpecialName
+    get_L(): PrivateScope, Public, HideBySig, SpecialName
+    get_R(): PrivateScope, Public, HideBySig, SpecialName
+    get_i0(): PrivateScope, Public, HideBySig, SpecialName
+    get_i1(): PrivateScope, Public, HideBySig, SpecialName
+    get_i2(): PrivateScope, Public, HideBySig, SpecialName
+    get_i3(): PrivateScope, Public, HideBySig, SpecialName
+    get_i4(): PrivateScope, Public, HideBySig, SpecialName
+Class QS._core_e_.Data.DataSeries+Statistics: AutoLayout, AnsiClass, Class, NestedPublic, Serializable, BeforeFieldInit
+    Void .ctor(QS._core_e_.Data.DataSeries): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 numberOfValues : Public
+    Double maximumValue : Public
+    Double minimumValue : Public
+    Double averageValue : Public
+    Double medianOfValues : Public
+    Double stretchOfValues : Public
+    Double stretchPerValue : Public
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class QS._core_e_.Data.DataSourceAttribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Attribute
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Name 'get ' : 
+  Methods:
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+Class QS._core_e_.Data.Drawing: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    DrawLine(Graphics, Pen, Single, Single, Single, Single): PrivateScope, Public, Static, HideBySig
+    DrawEllipse(Graphics, Pen, Single, Single, Single, Single): PrivateScope, Public, Static, HideBySig
+Interface QS._core_e_.Data.IDrawingContext: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    System.Drawing.Color DataColor 'get ' : 
+    System.Drawing.Color ConnectionsColor 'get ' : 
+    Boolean ConnectingLines 'get ' : 
+  Methods:
+    get_DataColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ConnectionsColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    ChangeColors(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_ConnectingLines(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class QS._core_e_.Data.DrawingContext: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_e_.Data.IDrawingContext
+Interface QS._core_e_.Data.IConverter: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    System.String Name 'get ' : 
+  Methods:
+    get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Convert(KeyValuePair`2[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface QS._core_e_.Data.IScale: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    System.String Name 'get ' : 
+  Methods:
+    get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    ValueToCoordinate(Range, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CoordinateToValue(Range, Double): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface QS._core_e_.Data.IView: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    QS._core_e_.Data.Range XRange 'get ' : 
+    QS._core_e_.Data.Range YRange 'get ' : 
+    QS._core_e_.Data.IScale XScale 'get ' : 
+    QS._core_e_.Data.IScale YScale 'get ' : 
+  Methods:
+    get_XRange(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_YRange(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_XScale(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_YScale(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Draw(Graphics, RectangleF): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Struct QS._core_e_.Data.Point: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double X : Public
+    Double Y : Public
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Struct QS._core_e_.Data.Range: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double Minimum 'get set' : 
+    Double Maximum 'get set' : 
+  Methods:
+    get_Minimum(): PrivateScope, Public, HideBySig, SpecialName
+    set_Minimum(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Maximum(): PrivateScope, Public, HideBySig, SpecialName
+    set_Maximum(Double): PrivateScope, Public, HideBySig, SpecialName
+    Contains(Double): PrivateScope, Public, HideBySig
+Struct QS._core_e_.Data.Rectangle: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(QS._core_e_.Data.Point, QS._core_e_.Data.Point): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    QS._core_e_.Data.Rectangle Zero 'get ' : 
+    QS._core_e_.Data.Point P1 'get ' : 
+    QS._core_e_.Data.Point P2 'get ' : 
+  Methods:
+    get_Zero(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_P1(): PrivateScope, Public, HideBySig, SpecialName
+    get_P2(): PrivateScope, Public, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class QS._core_e_.Data.Scale: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed
+  Fields:
+    QS._core_e_.Data.IScale Linear : Public, Static, InitOnly
+    QS._core_e_.Data.IScale Logarithmic : Public, Static, InitOnly
+  Properties:
+    System.Collections.Generic.IEnumerable`1[QS._core_e_.Data.IScale] Scales 'get ' : 
+  Methods:
+    get_Scales(): PrivateScope, Public, Static, HideBySig, SpecialName
+Class QS._core_e_.Data.View: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(QS._core_e_.Data.IData): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(QS._core_e_.Data.IDataSet): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(QS._core_e_.Data.Range, QS._core_e_.Data.Range, QS._core_e_.Data.IScale, QS._core_e_.Data.IScale): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_e_.Data.IView
+  Properties:
+    QS._core_e_.Data.Range XRange 'get set' : 
+    QS._core_e_.Data.Range YRange 'get set' : 
+    QS._core_e_.Data.IScale XScale 'get set' : 
+    QS._core_e_.Data.IScale YScale 'get set' : 
+  Methods:
+    Draw(IView, Graphics, RectangleF): PrivateScope, Public, Static, HideBySig
+    get_XRange(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_XRange(Range): PrivateScope, Public, HideBySig, SpecialName
+    get_YRange(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_YRange(Range): PrivateScope, Public, HideBySig, SpecialName
+    get_XScale(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_XScale(IScale): PrivateScope, Public, HideBySig, SpecialName
+    get_YScale(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_YScale(IScale): PrivateScope, Public, HideBySig, SpecialName
+Struct QS._core_e_.Data.XY: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, Serializable, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double x : Public
+    Double y : Public
+  Methods:
+    Compare(XY, XY): PrivateScope, Public, Static, HideBySig
+Class QS._core_e_.Data.XYSeries: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(QS._core_e_.Data.XY[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS._core_e_.Data.IDataSet
+    QS.Fx.Serialization.ISerializable
+    QS._core_c_.Diagnostics.IDataCollector
+    QS.Fx.Diagnostics.IDiagnosticsComponent
+  Fields:
+    XComparer xComparer : Public, Static, InitOnly
+  Properties:
+    QS._core_e_.Data.Rectangle Range 'get ' : 
+    QS._core_e_.Data.XY Item [Int32] 'get set' : 
+    QS._core_e_.Data.XY[] Data 'get set' : 
+    QS._core_e_.Data.IDataSet RawData 'get ' : 
+    QS._core_e_.Data.IDataSet MeaningfulData 'get ' : 
+    QS._core_e_.Data.IDataSet FlattenY 'get ' : 
+    QS._core_e_.Data.IDataSet Cumulative_Sum_Y 'get ' : 
+    QS._core_e_.Data.IDataSet Cumulative_Average_Y 'get ' : 
+    QS._core_e_.Data.IDataSet Growth_Rate 'get ' : 
+    QS._core_e_.Data.IDataSet Growth_Rate_25i 'get ' : 
+    QS._core_e_.Data.IDataSet Growth_Rate_50i 'get ' : 
+    QS._core_e_.Data.IDataSet Growth_Rate_100i 'get ' : 
+    QS._core_e_.Data.IDataSet Growth_Rate_200i 'get ' : 
+    QS._core_e_.Data.IDataSet AddUp_Y 'get ' : 
+    QS._core_e_.Data.IDataSet Integrate_Y 'get ' : 
+    QS._core_e_.Data.IDataSet Rate 'get ' : 
+    QS._core_e_.Data.IDataSet WithYLog10 'get ' : 
+    QS._core_e_.Data.IDataSet DropTailX95 'get ' : 
+    QS._core_e_.Data.IDataSet DropTailY95 'get ' : 
+    QS._core_e_.Data.IDataSet DropTailXY95 'get ' : 
+    QS._core_e_.Data.IDataSet AccumulateX50 'get ' : 
+    QS._core_e_.Data.IDataSet AccumulateX90 'get ' : 
+    QS._core_e_.Data.IDataSet AccumulateX95 'get ' : 
+    QS._core_e_.Data.IDataSet FlipXY 'get ' : 
+    QS._core_e_.Data.IDataSet ProjectOnX 'get ' : 
+    QS._core_e_.Data.IDataSet ProjectOnY 'get ' : 
+    QS._core_e_.Data.IDataSet L 'get ' : 
+    QS._core_e_.Data.IDataSet R 'get ' : 
+    QS._core_e_.Data.IDataSet i0 'get ' : 
+    QS._core_e_.Data.IDataSet i1 'get ' : 
+    QS._core_e_.Data.IDataSet i2 'get ' : 
+    QS._core_e_.Data.IDataSet i3 'get ' : 
+    QS._core_e_.Data.IDataSet i4 'get ' : 
+    QS._core_e_.Data.IDataSet i5 'get ' : 
+    QS._core_e_.Data.IDataSet i6 'get ' : 
+    QS._core_e_.Data.IDataSet i7 'get ' : 
+    QS._core_e_.Data.IDataSet i8 'get ' : 
+    QS._core_e_.Data.IDataSet i9 'get ' : 
+    QS._core_e_.Data.IDataSet SpanX 'get ' : 
+    QS._core_e_.Data.IDataSet SpanY 'get ' : 
+    QS._core_e_.Data.IDataSet CumulativeDistributionRaw 'get ' : 
+    QS._core_e_.Data.IDataSet CumulativeDistributionScaled 'get ' : 
+    QS._core_e_.Data.IDataSet CountX 'get ' : 
+    QS._core_e_.Data.IDataSet CountY 'get ' : 
+    QS._core_e_.Data.IDataSet SplitDuplicatesWithSameX 'get ' : 
+    QS._core_e_.Data.IDataSet GetOriginalsWithSameX 'get ' : 
+    QS._core_e_.Data.IDataSet GetDuplicatesWithSameX 'get ' : 
+    QS._core_e_.Data.IDataSet SplitDuplicatesWithSameY 'get ' : 
+    QS._core_e_.Data.IDataSet GetOriginalsWithSameY 'get ' : 
+    QS._core_e_.Data.IDataSet GetDuplicatesWithSameY 'get ' : 
+  Methods:
+    get_Range(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    set_Item(Int32, XY): PrivateScope, Public, HideBySig, SpecialName
+    get_Data(): PrivateScope, Public, HideBySig, SpecialName
+    set_Data(XY[]): PrivateScope, Public, HideBySig, SpecialName
+    sort(): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_RawData(): PrivateScope, Public, HideBySig, SpecialName
+    get_MeaningfulData(): PrivateScope, Public, HideBySig, SpecialName
+    get_FlattenY(): PrivateScope, Public, HideBySig, SpecialName
+    get_Cumulative_Sum_Y(): PrivateScope, Public, HideBySig, SpecialName
+    get_Cumulative_Average_Y(): PrivateScope, Public, HideBySig, SpecialName
+    get_Growth_Rate(): PrivateScope, Public, HideBySig, SpecialName
+    get_Growth_Rate_25i(): PrivateScope, Public, HideBySig, SpecialName
+    get_Growth_Rate_50i(): PrivateScope, Public, HideBySig, SpecialName
+    get_Growth_Rate_100i(): PrivateScope, Public, HideBySig, SpecialName
+    get_Growth_Rate_200i(): PrivateScope, Public, HideBySig, SpecialName
+    get_AddUp_Y(): PrivateScope, Public, HideBySig, SpecialName
+    get_Integrate_Y(): PrivateScope, Public, HideBySig, SpecialName
+    get_Rate(): PrivateScope, Public, HideBySig, SpecialName
+    get_WithYLog10(): PrivateScope, Public, HideBySig, SpecialName
+    rescaleYlog10(): PrivateScope, Public, HideBySig
+    get_DropTailX95(): PrivateScope, Public, HideBySig, SpecialName
+    get_DropTailY95(): PrivateScope, Public, HideBySig, SpecialName
+    get_DropTailXY95(): PrivateScope, Public, HideBySig, SpecialName
+    get_AccumulateX50(): PrivateScope, Public, HideBySig, SpecialName
+    get_AccumulateX90(): PrivateScope, Public, HideBySig, SpecialName
+    get_AccumulateX95(): PrivateScope, Public, HideBySig, SpecialName
+    get_FlipXY(): PrivateScope, Public, HideBySig, SpecialName
+    get_ProjectOnX(): PrivateScope, Public, HideBySig, SpecialName
+    get_ProjectOnY(): PrivateScope, Public, HideBySig, SpecialName
+    get_L(): PrivateScope, Public, HideBySig, SpecialName
+    get_R(): PrivateScope, Public, HideBySig, SpecialName
+    get_i0(): PrivateScope, Public, HideBySig, SpecialName
+    get_i1(): PrivateScope, Public, HideBySig, SpecialName
+    get_i2(): PrivateScope, Public, HideBySig, SpecialName
+    get_i3(): PrivateScope, Public, HideBySig, SpecialName
+    get_i4(): PrivateScope, Public, HideBySig, SpecialName
+    get_i5(): PrivateScope, Public, HideBySig, SpecialName
+    get_i6(): PrivateScope, Public, HideBySig, SpecialName
+    get_i7(): PrivateScope, Public, HideBySig, SpecialName
+    get_i8(): PrivateScope, Public, HideBySig, SpecialName
+    get_i9(): PrivateScope, Public, HideBySig, SpecialName
+    get_SpanX(): PrivateScope, Public, HideBySig, SpecialName
+    get_SpanY(): PrivateScope, Public, HideBySig, SpecialName
+    get_CumulativeDistributionRaw(): PrivateScope, Public, HideBySig, SpecialName
+    get_CumulativeDistributionScaled(): PrivateScope, Public, HideBySig, SpecialName
+    get_CountX(): PrivateScope, Public, HideBySig, SpecialName
+    get_CountY(): PrivateScope, Public, HideBySig, SpecialName
+    get_SplitDuplicatesWithSameX(): PrivateScope, Public, HideBySig, SpecialName
+    get_GetOriginalsWithSameX(): PrivateScope, Public, HideBySig, SpecialName
+    get_GetDuplicatesWithSameX(): PrivateScope, Public, HideBySig, SpecialName
+    get_SplitDuplicatesWithSameY(): PrivateScope, Public, HideBySig, SpecialName
+    get_GetOriginalsWithSameY(): PrivateScope, Public, HideBySig, SpecialName
+    get_GetDuplicatesWithSameY(): PrivateScope, Public, HideBySig, SpecialName
+Class QS._core_e_.Data.XYSeries+XComparer: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.Collections.Generic.IComparer`1[QS._core_e_.Data.XY]
+  Methods:
+    Compare(XY, XY): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Equals(XY, XY): PrivateScope, Public, HideBySig
+    GetHashCode(XY): PrivateScope, Public, HideBySig
+Class QS._core_e_.Repository.AttributeCollection: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :QS._core_e_.Repository.Attribute
+    Void .ctor(QS._core_e_.Repository.IRepository, System.String, QS.Fx.Inspection.IAttributeCollection): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(QS._core_e_.Repository.IRepository, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS.Fx.Inspection.IAttributeCollection
+  Properties:
+    QS._core_e_.Repository.IRepository Repository 'set' : 
+    QS._core_e_.Repository.Attribute[] Attributes 'get set' : 
+    System.String Key 'set' : 
+  Methods:
+    TryGet(String, Attribute&(Out)): PrivateScope, Public, HideBySig
+    Add(String, Attribute): PrivateScope, Public, HideBySig
+    Add(String, String, Object): PrivateScope, Public, HideBySig
+    set_Repository(IRepository): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Attributes(): PrivateScope, Public, HideBySig, SpecialName
+    set_Attributes(Attribute[]): PrivateScope, Public, HideBySig, SpecialName
+    set_Key(String): PrivateScope, Public, Virtual, HideBySig, SpecialName
+Struct QS._core_e_.MyMath.BaseStatistics: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Properties:
+    Double Average 'get ' : 
+    Double Variance 'get ' : 
+    Double CI95Size 'get ' : 
+  Methods:
+    AddSample(Double): PrivateScope, Public, HideBySig
+    get_Average(): PrivateScope, Public, HideBySig, SpecialName
+    get_Variance(): PrivateScope, Public, HideBySig, SpecialName
+    get_CI95Size(): PrivateScope, Public, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class QS._core_e_.MyMath.ConfidenceIntervals: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    Calculate95(Double[], Double&(Out), Double&(Out)): PrivateScope, Public, Static, HideBySig
+    Calculate95XY(XY[], Double&(Out), Double&(Out), Double&(Out), Double&(Out)): PrivateScope, Public, Static, HideBySig
+Class QS._core_e_.MyMath.LeastSquares: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    Fit(XY[], Double&(Out), Double&(Out)): PrivateScope, Public, Static, HideBySig
+Interface QS._core_e_.Repository.IRepository: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    QS.Fx.Inspection.IAttributeCollection
+    QS.Fx.Inspection.IAttribute
+  Properties:
+    System.String Root 'get ' : 
+  Methods:
+    get_Root(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Add(String, IAttribute): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    AttributeOf(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class QS._core_e_.Repository.ScalarAttribute: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :QS._core_e_.Repository.Attribute
+    Void .ctor(QS._core_e_.Repository.IRepository, System.String, QS.Fx.Inspection.IScalarAttribute): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(QS._core_e_.Repository.IRepository, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    QS.Fx.Inspection.IScalarAttribute
+  Properties:
+    System.String File 'get set' : 
+    System.Object _ObjectToSerialize 'get set' : 
+    System.Object Object 'get set' : 
+    System.String Key 'set' : 
+  Methods:
+    GenerateFileName(String): PrivateScope, Public, Static, HideBySig
+    get_File(): PrivateScope, Public, HideBySig, SpecialName
+    set_File(String): PrivateScope, Public, HideBySig, SpecialName
+    get__ObjectToSerialize(): PrivateScope, Public, HideBySig, SpecialName
+    set__ObjectToSerialize(Object): PrivateScope, Public, HideBySig, SpecialName
+    get_Object(): PrivateScope, Public, HideBySig, SpecialName
+    set_Object(Object): PrivateScope, Public, HideBySig, SpecialName
+    set_Key(String): PrivateScope, Public, Virtual, HideBySig, SpecialName
+Interface QS._core_x_.Uplink_old_.IController: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Interfaces:
+    System.IDisposable

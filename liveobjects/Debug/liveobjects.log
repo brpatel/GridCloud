@@ -1,0 +1,153 @@
+﻿Build started 3/31/2014 3:00:38 PM.
+     1>Project "C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\liveobjects.vcxproj" on node 4 (Build target(s)).
+     1>PreBuildEvent:
+         "C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\"\prebuild.bat "C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\" "C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\" "C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug" "C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\" Debug
+         :VCEnd
+         File not found - liveobjects_1.dll
+         0 File(s) copied
+         File not found - liveobjects_1.pdb
+         0 File(s) copied
+         File not found - liveobjects_4.dll
+         0 File(s) copied
+         File not found - liveobjects_4.pdb
+         0 File(s) copied
+         File not found - liveobjects_6.dll
+         0 File(s) copied
+         File not found - liveobjects_6.pdb
+         0 File(s) copied
+         File not found - liveobjects_7.dll
+         0 File(s) copied
+         0 File(s) copied
+         File not found - liveobjects_7.pdb
+         File not found - liveobjects_8.dll
+         0 File(s) copied
+         File not found - liveobjects_8.pdb
+         0 File(s) copied
+         File not found - liveobjects_9.dll
+         0 File(s) copied
+         File not found - liveobjects_9.pdb
+         0 File(s) copied
+         A subdirectory or file C:\liveobjects\bin already exists.
+       ClCompile:
+         C:\Personal\IDE\VS 12\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\liveobjects.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects_1\bin\x86\Debug\liveobjects_1.dll" /FU"C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects_4\bin\x86\Debug\liveobjects_4.dll" /FU"C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_5.dll" /FU"C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects_6\bin\x86\Debug\liveobjects_6.dll" /FU"C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects_7\bin\x86\Debug\liveobjects_7.dll" /FU"C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects_8\bin\x86\Debug\liveobjects_8.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Configuration.Install.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Management.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.ServiceProcess.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib stdafx.cpp
+         stdafx.cpp
+         C:\Personal\IDE\VS 12\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\liveobjects.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects_1\bin\x86\Debug\liveobjects_1.dll" /FU"C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects_4\bin\x86\Debug\liveobjects_4.dll" /FU"C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_5.dll" /FU"C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects_6\bin\x86\Debug\liveobjects_6.dll" /FU"C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects_7\bin\x86\Debug\liveobjects_7.dll" /FU"C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects_8\bin\x86\Debug\liveobjects_8.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Configuration.Install.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Management.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.ServiceProcess.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib _Installer.cpp AssemblyInfo.cpp liveobjects.cpp
+         _Installer.cpp
+         AssemblyInfo.cpp
+     1>AssemblyInfo.cpp(52): warning C4947: 'RequestMinimum' : marked as obsolete
+                 Message: 'Assembly level declarative security is obsolete and is no longer enforced by the CLR by default. See http://go.microsoft.com/fwlink/?LinkID=155570 for more information.'
+         liveobjects.cpp
+     1>liveobjects.cpp(214): warning C4947: 'System::AppDomain::ExecuteAssembly' : marked as obsolete
+                 Message: 'Methods which use evidence to sandbox are obsolete and will be removed in a future release of the .NET Framework. Please use an overload of ExecuteAssembly which does not take an Evidence parameter. See http://go.microsoft.com/fwlink/?LinkID=155570 for more information.'
+     1>liveobjects.cpp(555): warning C4065: switch statement contains 'default' but no 'case' labels
+         Generating Code...
+         C:\Personal\IDE\VS 12\VC\bin\CL.exe /c /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /analyze- /errorReport:prompt "C:\Users\brpatel\AppData\Local\Temp\.NETFramework,Version=v4.0.AssemblyAttributes.cpp"
+         .NETFramework,Version=v4.0.AssemblyAttributes.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\app.res" app.rc 
+     1>C:\Personal\IDE\VS 12\VC\include\sal.h(2886): warning RC4005: '__useHeader' : redefinition
+         
+     1>C:\Personal\IDE\VS 12\VC\include\sal.h(2896): warning RC4005: '__on_failure' : redefinition
+         
+       Link:
+         C:\Personal\IDE\VS 12\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /SAFESEH Debug\app.res
+         Debug\_Installer.obj
+         Debug\AssemblyInfo.obj
+         Debug\liveobjects.obj
+         Debug\stdafx.obj
+         "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+         "C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_3.lib"
+         "C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_2.lib"
+         liveobjects.vcxproj -> C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects.exe
+       PostBuildEvent:
+         "C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\"\postbuild.bat "C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\" "C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\" "C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\" Debug
+         :VCEnd
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_1.dll
+         1 File(s) copied
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_1.pdb
+         1 File(s) copied
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_2.dll
+         1 File(s) copied
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_2.pdb
+         1 File(s) copied
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_3.dll
+         1 File(s) copied
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_3.pdb
+         1 File(s) copied
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_4.dll
+         1 File(s) copied
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_4.pdb
+         1 File(s) copied
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_5.dll
+         1 File(s) copied
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_5.pdb
+         1 File(s) copied
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_6.dll
+         1 File(s) copied
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_6.pdb
+         1 File(s) copied
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_7.dll
+         1 File(s) copied
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_7.pdb
+         1 File(s) copied
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_8.dll
+         1 File(s) copied
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_8.pdb
+         1 File(s) copied
+         File not found - liveobjects_9.dll
+         0 File(s) copied
+         File not found - liveobjects_9.pdb
+         0 File(s) copied
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects.exe
+         1 File(s) copied
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects.pdb
+         1 File(s) copied
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\liveobjects.reg
+         1 File(s) copied
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\objects\001c.liveobject
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\objects\001s.liveobject
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\objects\002c.liveobject
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\objects\002s.liveobject
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\objects\003.liveobject
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\objects\bootstrap.liveobject
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\objects\client.liveobject
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\objects\ootc.liveobject
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\objects\service.liveobject
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\objects\test_01_bootstrap.liveobject
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\objects\test_01_client.liveobject
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\objects\test_01_service.liveobject
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\objects\test_02_bootstrap.liveobject
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\objects\test_02_client.liveobject
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\objects\test_02_service.liveobject
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\objects\test_03_bootstrap.liveobject
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\objects\test_03_client.liveobject
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\objects\test_03_service.liveobject
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\objects\test_04_bootstrap.liveobject
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\objects\test_04_client.liveobject
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\objects\test_04_service.liveobject
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\objects\test_05_bootstrap.liveobject
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\objects\test_05_client.liveobject
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\objects\test_05_service.liveobject
+         24 File(s) copied
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\scenarios\aggregation.xml
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\scenarios\bootstrap.xml
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\scenarios\dataflow.xml
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\scenarios\dissemination.xml
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\scenarios\foo.xml
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\scenarios\multicast.xml
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\scenarios\replication.xml
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\scenarios\ring.xml
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\scenarios\storage.xml
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\scenarios\synchronization.xml
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\scenarios\tree.xml
+         11 File(s) copied
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\dataflows\lockstep_flow.ruleset
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\dataflows\lockstep_root.ruleset
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\dataflows\mship_flow.ruleset
+         C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\dataflows\mship_root.ruleset
+         4 File(s) copied
+     1>Done Building Project "C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects\liveobjects.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:12.08

@@ -1,0 +1,29 @@
+﻿Build started 3/31/2014 2:59:46 PM.
+     1>Project "C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects_2\liveobjects_2.vcxproj" on node 3 (Build target(s)).
+     1>ClCompile:
+         C:\Personal\IDE\VS 12\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D QUICKSILVER_0_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\liveobjects_2.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\sal_supp.h(57): warning C4005: '__useHeader' : macro redefinition
+                 c:\personal\ide\vs 12\vc\include\sal.h(2886) : see previous definition of '__useHeader'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\specstrings_supp.h(77): warning C4005: '__on_failure' : macro redefinition
+                 c:\personal\ide\vs 12\vc\include\sal.h(2896) : see previous definition of '__on_failure'
+         C:\Personal\IDE\VS 12\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D QUICKSILVER_0_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\liveobjects_2.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt liveobjects_2.cpp
+         liveobjects_2.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\liveobjects_2.res" liveobjects_2.rc 
+     1>C:\Personal\IDE\VS 12\VC\include\sal.h(2886): warning RC4005: '__useHeader' : redefinition
+         
+     1>C:\Personal\IDE\VS 12\VC\include\sal.h(2896): warning RC4005: '__on_failure' : redefinition
+         
+       Link:
+         C:\Personal\IDE\VS 12\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_2.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_2.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_2.lib" /MACHINE:X86 /SAFESEH /DLL Debug\liveobjects_2.res
+         Debug\liveobjects_2.obj
+         Debug\stdafx.obj
+     1>liveobjects_2.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+            Creating library C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_2.lib and object C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_2.exp
+         liveobjects_2.vcxproj -> C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\Debug\liveobjects_2.dll
+     1>Done Building Project "C:\Cornell\Projects\CloudComputing\ldo4gridcloud\Liveobjects-Source\liveobjects_2\liveobjects_2.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:09.49
